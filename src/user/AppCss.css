@@ -1,0 +1,22 @@
+.textfield{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+.submit{
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-left: 100px;
+    font-family: sans-serif;
+    
+}
+.form{
+    padding-left: 350px;
+    padding-top: 50Px;
+}
+.heading{
+    padding-left: 50px;
+    font: bold;
+    font-size: large;
+}
