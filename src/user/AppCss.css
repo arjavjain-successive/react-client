@@ -3,12 +3,13 @@
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
+    background-color:dodgerblue;
 }
 .submit{
-    padding: 12px 20px;
-    margin: 8px 0;
-    margin-left: 100px;
-    font-family: sans-serif;
+    padding: 12px 20px 12px 20px;
+    margin-left: 190px;
+    background-color:hotpink;
+    display: inline-block;
     
 }
 .form{
@@ -16,7 +17,12 @@
     padding-top: 50Px;
 }
 .heading{
-    padding-left: 50px;
-    font: bold;
-    font-size: large;
+    padding-right: 50%;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    font-size: 25px;
+    text-align: center;
+    font-family: cursive;
+    font-style:oblique;
+    color:navy;
 }

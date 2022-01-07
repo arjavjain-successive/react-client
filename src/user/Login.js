@@ -45,11 +45,39 @@ class Login extends React.Component {
 const  Login = () => {
   const [email,setEmail] = useState("");
   const [password,setPassword] = useState("");
-  const onSubmitt = () =>{
-    window.alert("Email:"+ email + "  Password:" + password);
-    setEmail('');
-    setPassword('');
+  const emailValidation = () => {
+    var regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if(email.match(regex)){
+        return true;
+    }
+    return false;
+}
+const passwordValidation = () => {
+  var passregex = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
+  if(password.match(passregex)){
+    return true;
   }
+  else{
+    return false;
+  }
+}
+  const onSubmitt = () =>{
+    var res = emailValidation();
+    var pass = passwordValidation();
+    if(!res){
+      alert("email is not in proper format")
+    }
+    
+    else if (!pass){
+      alert("password is not in proper format")
+    }
+    else{
+      window.alert("Email:"+ email + "  Password:" + password);
+      setEmail('');
+      setPassword('');
+    }
+    }
+  
   return( 
     <div className = "form">
     <h1 className = "heading">Welcome to my Login Page</h1>
