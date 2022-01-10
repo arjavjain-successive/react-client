@@ -1,23 +1,32 @@
 .textfield{
-    width: 50%;
+    width: 70%;
     padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    background-color:dodgerblue;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
 }
 .submit{
     padding: 12px 20px 12px 20px;
-    margin-left: 190px;
-    background-color:hotpink;
+    margin-left: 250px;
     display: inline-block;
-    
+
 }
 .form{
-    padding-left: 350px;
-    padding-top: 50Px;
+    border-radius: 72px;
+    margin-top: 90px;
+    background-repeat: repeat;
+    padding-left: 40px;
+    margin-left: 250px;
+    margin-right: 200px;
+    height: 350px;
+    width: 700px;
+    background:dodgerblue;
+    
+
 }
 .heading{
-    padding-right: 50%;
+  
+    padding-right: 30px;
     padding-bottom: 25px;
     padding-top: 25px;
     font-size: 25px;
@@ -25,4 +34,10 @@
     font-family: cursive;
     font-style:oblique;
     color:navy;
+}
+.submit .Polaris-Button{
+    background-color: coral;
+    font-family: cursive;
+    font-style:italic;
+    border-radius: 40px;
 }

@@ -80,22 +80,22 @@ const passwordValidation = () => {
   
   return( 
     <div className = "form">
-    <h1 className = "heading">Welcome to my Login Page</h1>
+      <h1 className = "heading">Welcome to my Login Page</h1>
       <Form onSubmit = {onSubmitt}> 
-          <FormLayout>
-            <div className = "textfield">
-     <TextField label="Email" autoComplete="off" align="left" type="email" value= {email}
-      onChange ={ (newValue) => setEmail(newValue)} />
-            <br/>
+        <FormLayout>
+          <div className = "textfield">
+            <TextField label="Email" autoComplete="off" align="left" type="email" value= {email}
+              onChange ={ (newValue) => setEmail(newValue)} />
+              <br/>
             <TextField label="Password" autoComplete="off" align="left" type="password" value = {password}
-      onChange ={ (newValue) => setPassword(newValue)} />
-      </div>
-      <div className="submit">
+              onChange ={ (newValue) => setPassword(newValue)} />
+          </div>
+          <div className="submit">
             <Button submit >Submit</Button>
-            </div>
-            </FormLayout>
-        </Form>
-      </div>
+          </div>
+        </FormLayout>
+    </Form>
+  </div>
   );
 
 }
