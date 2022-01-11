@@ -48,11 +48,11 @@ const  Login = () => {
   const [emailError, setEmailError] = useState("");
   const [passwordError,setPasswordError] = useState("");
   const emailValidation = () => {
-    var regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const EmailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if(email === ''){
       setEmailError("email is required")
     }
-    else if(email.match(regex)){
+    else if(email.match(EmailRegex)){
       setEmailError('')
     }
     else{
@@ -68,8 +68,8 @@ const passwordErrorrValidation = () => {
   }
 }
 const passwordValidation = () => {
-  var passregex = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
-  if(password.match(passregex)){
+  var passwordregex = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
+  if(password.match(passwordregex)){
     return true;
   }
   else{
