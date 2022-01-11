@@ -1,5 +1,5 @@
 import React from 'react';
-import './AppCss.css'
+import "./LoginCss.css"
 import { TextField,Button,Form,FormLayout} from '@shopify/polaris';
 import { useState } from 'react';
 /*
@@ -77,11 +77,11 @@ const passwordValidation = () => {
   }
 }
   const onSubmitt = () =>{
-    var pass = passwordValidation();
+    var passwordValidationResult = passwordValidation();
     if(emailError !== ""){
       alert("Email is not in proper format please read the instruction")
     }
-    else if (!pass){
+    else if (!passwordValidationResult){
       alert("password is not in proper format")
     }
     else{
