@@ -41,3 +41,11 @@
     font-style:italic;
     border-radius: 40px;
 }
+.error{
+    font-style: initial;
+    font-weight: lighter;
+    color: red;
+}
+.Polaris-Label__Text {
+    font-style: italic
+}

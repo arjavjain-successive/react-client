@@ -45,12 +45,27 @@ class Login extends React.Component {
 const  Login = () => {
   const [email,setEmail] = useState("");
   const [password,setPassword] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [passwordError,setPasswordError] = useState("");
   const emailValidation = () => {
     var regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if(email.match(regex)){
-        return true;
+    if(email === ''){
+      setEmailError("email is required")
     }
-    return false;
+    else if(email.match(regex)){
+      setEmailError('')
+    }
+    else{
+      setEmailError("please enter the valid email")
+    }
+}
+const passwordErrorrValidation = () => {
+  if(password === ''){
+    setPasswordError("Password is required");
+  }
+  else{
+    setPasswordError("");
+  }
 }
 const passwordValidation = () => {
   var passregex = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
@@ -62,12 +77,10 @@ const passwordValidation = () => {
   }
 }
   const onSubmitt = () =>{
-    var res = emailValidation();
     var pass = passwordValidation();
-    if(!res){
-      alert("email is not in proper format")
+    if(emailError !== ""){
+      alert("Email is not in proper format please read the instruction")
     }
-    
     else if (!pass){
       alert("password is not in proper format")
     }
@@ -76,6 +89,7 @@ const passwordValidation = () => {
       setEmail('');
       setPassword('');
     }
+
     }
   
   return( 
@@ -85,10 +99,12 @@ const passwordValidation = () => {
         <FormLayout>
           <div className = "textfield">
             <TextField label="Email" autoComplete="off" align="left" type="email" value= {email}
-              onChange ={ (newValue) => setEmail(newValue)} />
+                onChange ={ (newValue) => setEmail(newValue)} onBlur = {emailValidation}/>
+              <span className = "error">{emailError}</span>
               <br/>
             <TextField label="Password" autoComplete="off" align="left" type="password" value = {password}
-              onChange ={ (newValue) => setPassword(newValue)} />
+              onChange ={ (newValue) => setPassword(newValue)} onBlur = {passwordErrorrValidation} />
+              <span className = "error">{passwordError}</span>
           </div>
           <div className="submit">
             <Button submit >Submit</Button>
