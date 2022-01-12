@@ -42,6 +42,8 @@ class Login extends React.Component {
 }
 */
 
+//This is Function Component
+
 const  Login = () => {
   const [email,setEmail] = useState("");
   const [password,setPassword] = useState("");
