@@ -102,17 +102,16 @@ const passwordValidation = () => {
             navigate('/Admin');
           }
           else if(data.type === "user"){
-            navigate('/user');
+            navigate('/User');
           }
           else if(data.type === "trainee"){
             navigate('/Trainee');
           }
-        }
-        else{
-          alert("You are not Authorised to login!");
-          setEmail("");
-          setPassword("");
-          
+          else{
+            alert("You are not Authorised to login!");
+            setEmail("");
+            setPassword("");
+          }
         }
       });
     }
