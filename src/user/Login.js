@@ -3,6 +3,8 @@ import "./LoginCss.css"
 import dummyData from '../data/login';
 import { TextField,Button,Form,FormLayout} from '@shopify/polaris';
  import { useState } from 'react';
+import { useNavigate } from 'react-router';
+
 
 
 /*
@@ -49,7 +51,7 @@ class Login extends React.Component {
 //This is Function Component
 
 const  Login = () => {
-
+  const navigate = useNavigate();
   const [email,setEmail] = useState("");
   const [password,setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
@@ -83,7 +85,7 @@ const passwordValidation = () => {
     return false;
   }
 }
-  const onSubmitt = () =>{
+  const onSubmitt = (replace,nextState) =>{
     var passwordValidationResult = passwordValidation();
     if(emailError !== ""){
       alert("Email is not in proper format please read the instruction")
@@ -97,22 +99,20 @@ const passwordValidation = () => {
           setEmail("");
           setPassword("");
           if(data.type === "admin"){
-           
+            navigate('/Admin');
           }
           else if(data.type === "user"){
-
+            navigate('/user');
           }
           else if(data.type === "trainee"){
-
-          }
-          else{
-            alert("You are not Authorized to login!");
+            navigate('/Trainee');
           }
         }
         else{
-          setPassword("");
+          alert("You are not Authorised to login!");
           setEmail("");
-          alert("Email and password not match!");
+          setPassword("");
+          
         }
       });
     }
