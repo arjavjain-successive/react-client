@@ -85,7 +85,7 @@ const passwordValidation = () => {
     return false;
   }
 }
-  const onSubmitt = (replace,nextState) =>{
+  const onSubmitt = () =>{
     var passwordValidationResult = passwordValidation();
     if(emailError !== ""){
       alert("Email is not in proper format please read the instruction")
