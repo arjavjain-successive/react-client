@@ -20,6 +20,12 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.books{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  
+}
 .App-link {
   color: #61DAFB;
 }

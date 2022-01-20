@@ -1,9 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./LoginCss.css"
 import dummyData from '../data/login';
 import { TextField,Button,Form,FormLayout} from '@shopify/polaris';
  import { useState } from 'react';
-import { useNavigate } from 'react-router';
 
 
 
@@ -98,20 +98,7 @@ const passwordValidation = () => {
         if(data.email === email && data.password === password){
           setEmail("");
           setPassword("");
-          if(data.type === "admin"){
-            navigate('/Admin');
-          }
-          else if(data.type === "user"){
-            navigate('/User');
-          }
-          else if(data.type === "trainee"){
-            navigate('/Trainee');
-          }
-          else{
-            alert("You are not Authorised to login!");
-            setEmail("");
-            setPassword("");
-          }
+          navigate("/dashboard");
         }
       });
     }
