@@ -2,8 +2,8 @@ import { Form, FormLayout, TextField, Modal } from "@shopify/polaris";
 import React, { useState } from "react";
 const Add = (props) => {
 	const { active, handleChange } = props;
-	const [book, setBook] = useState("");
 	const [author, setAuthor] = useState("");
+	const [book, setBook] = useState("");
 	const [price, setPrice] = useState("");
 
 	return (

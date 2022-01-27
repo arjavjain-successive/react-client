@@ -53,15 +53,15 @@ class Login extends React.Component {
 const  Login = () => {
   const navigate = useNavigate();
   const [email,setEmail] = useState("");
-  const [password,setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
+  const [password,setPassword] = useState("");
   const [passwordError,setPasswordError] = useState("");
   const emailValidation = () => {
-    const EmailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if(email === ''){
       setEmailError("email is required")
     }
-    else if(email.match(EmailRegex)){
+    else if(email.match(emailRegex)){
       setEmailError('')
     }
     else{
@@ -77,8 +77,8 @@ const passwordErrorrValidation = () => {
   }
 }
 const passwordValidation = () => {
-  var passwordregex = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
-  if(password.match(passwordregex)){
+  var passwordRegex = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
+  if(password.match(passwordRegex)){
     return true;
   }
   else{
