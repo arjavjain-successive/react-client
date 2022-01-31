@@ -1,7 +1,7 @@
 import { Card, ResourceList, ResourceItem, TextStyle, Avatar } from "@shopify/polaris";
 import React from "react";
 import '../../App.css'
-import books from "../../data/book/Book";
+import books from "../../data/book/book";
 
 const Trainee = () => {
   const resourceName = {
