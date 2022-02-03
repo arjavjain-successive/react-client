@@ -8,6 +8,7 @@ const Trainee = () => {
     singular: "book",
     plural: "books"
   };
+  
   return (
     <div className="books">
       <Card title="Trainee dashboard" sectioned>

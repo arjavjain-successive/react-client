@@ -1,5 +1,7 @@
 import { Form, FormLayout, TextField, Modal } from "@shopify/polaris";
 import React, { useState } from "react";
+
+
 const Add = (props) => {
 	const { active, handleChange } = props;
 	const [author, setAuthor] = useState("");
@@ -7,7 +9,7 @@ const Add = (props) => {
 	const [price, setPrice] = useState("");
 
 	return (
-		<div>
+		<React.Fragment>
 			<Modal
 				open={active}
 				onClose={handleChange}
@@ -38,7 +40,7 @@ const Add = (props) => {
 				</Modal.Section>
 			</Modal>
 
-		</div>
+		</React.Fragment>
 	);
 }
 export default Add;
