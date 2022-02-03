@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { TopBar } from '@shopify/polaris';
 import { useNavigate } from 'react-router';
 
-export default function TopBarExample() {
+const TopBarExample = () => {
   const navigate = useNavigate();
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
   const toggleIsUserMenuOpen = useCallback(
@@ -52,3 +52,4 @@ export default function TopBarExample() {
     </div>
   );
 }
+export default TopBarExample;
