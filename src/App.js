@@ -2,16 +2,18 @@
 import enTranslations from '@shopify/polaris/locales/en.json';
 import { AppProvider } from "@shopify/polaris";
 import "@shopify/polaris/build/esm/styles.css";
-import Routers from './route/route';
+import React from 'react';
+import TextFieldDemo from './pages';
+
 
 const App = () => {
   
   return (
-    <div>
-    <AppProvider i18n={enTranslations}>
-      <Routers/>
-  </AppProvider>
-  </div>
+    <React.Fragment>
+      <AppProvider i18n={enTranslations}>
+      <TextFieldDemo />
+    </AppProvider>
+    </React.Fragment>
   );
 }
 
