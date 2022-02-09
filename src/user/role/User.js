@@ -1,8 +1,8 @@
 import { Card, ResourceList, ResourceItem, TextStyle, Button, Avatar } from "@shopify/polaris";
 import React, { useCallback, useState } from "react";
 import '../../App.css'
-import books from "../../data/book/Book";
-import Add from "../components/Add";
+import books from "../../data/book/book";
+import Add from "../components/add";
 
 const User = () => {
   const resourceName = {
@@ -12,6 +12,7 @@ const User = () => {
   const [selectedItems, setSelectedItems] = useState([]);
   const [active, setActive] = useState(false);
   const handleChange = useCallback(() => setActive(!active), [active]);
+  
   return (
     <div className="books">
       <Card title="User dashboard" sectioned>

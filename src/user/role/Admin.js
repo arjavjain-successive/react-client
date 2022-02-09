@@ -18,6 +18,7 @@ const Admin = () => {
   const handleChange = useCallback(() => setActive(!active), [active]);
   const handleChangeEdit = useCallback(() => setActiveEdit(!activeEdit), [activeEdit]);
   const handleChangeDelete = useCallback(() => setActiveDelete(!activeDelete), [activeDelete]);
+
   return (
     <div className="books">
       <Card title="Admin dashboard" sectioned>
